@@ -12,12 +12,20 @@
   <link rel="stylesheet" href="{% static 'mainstatic/css/bootstrap.min.css' %}" type="text/css">
  </head>
  <body>
-
    {% include "maintemplate/includes/header.html" %}
 
-   {% block content %}
+   <div class="jumbotron">
+    <div class="container">
+      {% block content %}
 
-   {% endblock %}
+      {% endblock %}
+      <p>
+        <a href="/" class="btn btn-success btn-lg">Главная страница</a>
+        <a href="/news" class="btn btn-primary btn-lg">Новости &raquo;</a>
+        <a href="/contacts" class="btn btn-info btn-lg">Контакты</a>
+      </p>
+    </div>
+  </div>
 
    {% include "maintemplate/includes/footer.html" %}
 
